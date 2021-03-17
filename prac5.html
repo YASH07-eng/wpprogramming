@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form</title>
+	<link rel="stylesheet" type="text/css" href="css/style2.css">
+</head>
+<body bgcolor="blue">
+	<h2 style="font-size: 200% ">Student Registration Form</h2>
+	<form>
+		<div class="container">
+		First-Name : <input type="text" name="fname" required="required" placeholder="Enter your first name" autofocus><br> 
+		Last-Name : <input type="text" name="lname" required="required" placeholder="Enter your last name"><br>
+		Email: <input type="Email" name="email" placeholder="Enter your mail address"><br>
+		Age:<input type="number" name="age" min="18" max="25" step="1"><br>
+		Gender : <label> male<input type="radio" name="gender" checked="checked"></label> <label> female<input type="radio" name="gender"></label><br>
+		Contact number : <input type="tel" name="contact"><br>
+		Upload photo : <input type="file" name="photo" accept=".jpg"><br><!-- add multiple to add multiple files--> 
+		Birth Date : <input type="date" name="bdate"><br>
+		Birth Time : <input type="Time" name="btime"><br>
+		Temparary Address: <textarea rows="4" cols="30"></textarea><br>
+		Permanent Address: <textarea rows="4" cols="30"></textarea><br>
+		Favorite programming language:
+		<select>
+			<optgroup label="programming">
+			<option value="java">java</option>
+			<option value="python">python</option></optgroup>
+			<optgroup label="web designing">
+			<option value="html">html</option>
+			<option value="css">css</option></optgroup>
+		</select><br>
+		<input type="submit" name="submit" onclick="message()">
+		<input type="reset">
+		</div>
+	</form>
+	<script>
+		function message(){
+		alert("form submitted")
+		}
+	</script>
+</body>
+</html>
