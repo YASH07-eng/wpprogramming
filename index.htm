@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web Programming</title>
+	<style>
+		*{
+			margin: 0px;
+			padding: 0px;
+			box-sizing: content-box;
+		}
+		.container{
+			text-align: center;
+			display: flex;
+			font-size: 50px;
+			background-color: rgb(232,178,95,0.8);
+			text-shadow: 2px 3px red;
+		}
+		img{
+			padding: 5px 0px 5px 5px;
+			height: 100px;
+			width: 100px;
+		}
+		h2{
+			font-weight: bold;
+			text-align: center;
+			font-size: 40px;
+		}
+		table {
+		border:  solid black;
+		width: 80%;
+		margin: auto; 
+		}
+		table tr td{
+		text-align: center;
+		font-weight: bold;
+		font-size: 20px;
+		background-color: rgb(200,190,95,0.5);
+		padding-top:8px;
+		padding-bottom:8px; 
+		border: 1px solid black;
+		}
+		table tr td:hover{
+		background-color: cyan;
+		}
+		table tr th{
+		background-color: rgb(226,143,15,0.8);
+		border: 1px solid black;
+		position: sticky;
+		padding-top:8px;
+		padding-bottom:8px;
+		}
+		table tr th:hover{
+		background-color: yellow;
+		}
+		body{
+			background-color: rgb(241,248,144,0.4);
+		}
+		footer{
+			margin-top: 250px;
+			background-color: black;
+			color: rgb(216, 210, 210);
+			text-align: center;
+		}
+		.navbar button{
+	    border: none;
+	    color: black;
+	    width: 35%;
+	    padding: 20px;
+	    text-align: center;
+	    text-decoration: none;
+	    display: inline-block;
+	    font-size: 25px;
+	    margin: 4px 2px;
+	    cursor: pointer;
+	    margin: 20px 65px;
+	   text-shadow: 2px 3px red;}
+	   #lec{
+	   	display: block;
+	   }
+	   #lab{
+	   	display: none;
+	   }
+	</style>
+</head>
+<body>
+	<div class="container">
+	<img src="lecture/images/logo.png" width="100px" height="100px">
+	<p><h1 style="padding: 0px 200px">Web Programming</h1></p>
+	</div>
+	<p><h2>PRACTICALS</h2></p>
+	<h3 class="navbar">
+		<button style="background-color:rgb(226,143,15,0.8)" onclick="showLab()"><b>WP lab work</b></button>
+		<button style="background-color:rgb(200,190,95,0.5)" onclick="showLec()"><b>WP lecture work</b></button>
+	</h3>
+	<div id="lec">
+	<table>
+		<tr>
+			<th>NO.</th>
+			<th>Lecture Title</th>
+			<th>Content</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Employees Data with Hover Effect</td>
+			<td><a href="lecture\employee data.htm" target="_blank">Click here</a></td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Table with types of list along with hover effect</td>
+			<td><a href="lecture\list type.htm" target="_blank">Click here</a></td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Emoji using Javascript(In place of bulb)</td>
+			<td><a href="lecture\javascript emoji.htm" target="_blank">Click here</a></td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Indian map along use of usemap attribute</td>
+			<td><a href="lecture\indian map.htm" target="_blank">Click here</a></td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>HTML Tables Layout</td>
+			<td><a href="lecture\table layout.html" target="_blank">Click here</a></td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>Dice Game</td>
+			<td><a href="lecture\dice game.html" target="_blank">Click here</a></td>
+		</tr>
+		
+			
+	</table>
+</div>
+<div id="lab">
+	<table>
+		<tr>
+			<th>NO.</th>
+			<th>Lab Title</th>
+			<th>Content</th>
+		</tr>
+		<tr>
+			<td>1.1</td>
+			<td>Employees Data with Hover Effect</td>
+			<td><a href="lab\practical 1\employee data.htm" target="_blank">Click here</a></td>
+		</tr>
+		<tr>
+			<td>1.2</td>
+			<td>Registration Form</td>
+			<td><a href="lab\practical 1\registration form.html" target="_blank">Click here</a></td>
+		</tr>
+		<tr>
+			<td>1.3</td>
+			<td>Ticket booking system</td>
+			<td><a href="lab\practical 1\ticket booking system.html" target="_blank">Click here</a></td>
+		</tr>
+		<tr>
+			<td>2.1</td>
+			<td>Mouse Hover Effect</td>
+			<td><a href="lab\practical 2\mouse hover effect.htm" target="_blank">Click here</a></td>
+		</tr>
+		<tr>
+			<td>2.2</td>
+			<td>News website</td>
+			<td><a href="lab\practical 2\news website.html" target="_blank">Click here</a></td>
+		</tr>
+		<tr>
+			<td>2.3</td>
+			<td>Concept of pseudo class</td>
+			<td><a href="lab\practical 2\psuedo class.html" target="_blank">Click here</a></td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Use of Bootstrap</td>
+			<td><a href="lab\practical 3\BOOTSTRAP_ALL.HTML" target="_blank">Click here</a></td>
+		</tr>
+	</table>
+</div>
+<script>
+
+        function showLec() {
+            document.getElementById("lec").style.display = "block";
+            document.getElementById("lab").style.display = "none";
+           
+
+        }
+        function showLab() {
+            document.getElementById("lab").style.display = "block";
+            document.getElementById("lec").style.display = "none";
+           
+        }
+</script>
+	<footer>
+		<h3>Developed by:</h3>
+		<h3>ENROLLMENT NUMBER : 180020107017</h3>
+		<h3>NAME: GHELANI YASH </h3>	
+	</footer>
+</body>
+</html>
