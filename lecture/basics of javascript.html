@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Basics of javascript</title>
+</head>
+<body>
+	<center>
+	<div style="background-color: cyan"><h1>BASICS OF JAVASCRIPT</h1></div>	
+<hr>
+<h2>JavaScript Operators</h2>
+<p>x = 5, y = 2, calculate z = x + y, and display z:</p>
+<p id="demo1"></p>
+<p>x = 5, y = 2, calculate z = x - y, and display z:</p>
+<p id="demo2"></p>
+<p>x = 5, y = 2, calculate z = x * y, and display z:</p>
+<p id="demo3"></p>
+<p>x = 5, y = 2, calculate z = x / y, and display z:</p>
+<p id="demo4"></p>
+
+<hr>
+
+<h2>To get date using js date object</h2>
+<p id="demo6"></p>
+
+<hr>
+
+<h2>JavaScript For Loop</h2>
+<p id="demo7"></p>
+
+<hr>
+
+<h2>JavaScript while Loop</h2>
+<p id="demo8"></p>
+
+<hr>
+
+<h2>JavaScript String Methods</h2>
+
+<p>Search a string for "W3Schools", and display the position of the match using search():</p>
+
+<p id="demo9"></p>
+ 
+<hr>
+
+<h2>JavaScript Output method</h2>
+<p>Output using innerHTML</p>
+<p id="demo5"></p>
+<p>Output using window.alert</p>
+<input type="submit" onclick="alert('hello world');">
+<p>Output using document.write</p>
+
+	</center>
+<script>
+var x = 5;
+var y = 2;
+var z1 = x + y;
+var z2 = x - y;
+var z3 = x * y;
+var z4 = x / y;
+document.getElementById("demo1").innerHTML = z1;
+document.getElementById("demo2").innerHTML = z2;
+document.getElementById("demo3").innerHTML = z3;
+document.getElementById("demo4").innerHTML = z4;
+document.getElementById("demo5").innerHTML = "Hello World";
+var d = new Date();
+document.getElementById("demo6").innerHTML = d;
+var text = "";
+var i;
+for (i = 0; i < 10; i++) {
+  text += i + "<br>";
+}
+document.getElementById("demo7").innerHTML = text;
+var text2 = "";
+var i2 = 0;
+while (i2 < 10) {
+  text2 += "<br>The number is " + i2;
+  i2++;
+}
+var str = "Visit W3Schools!"; 
+var n = str.search("W3Schools");
+document.getElementById("demo9").innerHTML = n;
+document.getElementById("demo8").innerHTML = text2;
+document.write("hello world");
+</script>
+
+</body>
+</html>

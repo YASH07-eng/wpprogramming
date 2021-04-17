@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Form</title>
+	<link rel="stylesheet" type="text/css" href="css/style2.css">
+</head>
+<body>
+	<form name="myform" onSubmit="return formvalidation();">
+  <div class="container">
+  	<h1 align="center">Login Form</h1>
+    <label for="uname"><b>Username</b></label>
+    <input type="text" name="uname" id="uname" placeholder="Enter Your User Name"  required="">
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" name="psw" id="psw" placeholder="Enter Your Password" required="">
+
+    <label for="phone"><b>Phone Number</b></label>
+    <input type="tel" name="phone" id="phone" placeholder="Enter Your Phone number" required="">
+
+    <button type="submit">Login</button>
+    
+</form>
+<script>
+	function formvalidation(){
+        var u_name=document.myform.uname;
+        var p_sw=document.myform.psw;
+        var p_hone=document.myform.phone;
+        
+        if(valid_uname(u_name)){
+            if(valid_psw(p_sw)){
+                if (valid_phone(p_hone)){
+
+                }
+
+            }
+        }
+        else{
+            return false;
+        }
+
+    }
+	function valid_uname(uname){
+	if (uname[0]=="_" || uname[0]=="@" && (uname[0] <= '9' && uname[0] >= '0')){
+		alert("invalid Username");
+		uname.focus();
+		return false;
+	}
+	else{
+		return true;
+	}
+	}
+
+	function valid_psw(psw){
+	if(psw.length() > 6 && psw.length() < 12){
+		return true;
+		
+	}
+	else{
+		alert("invalid password");
+		psw.focus();
+		return false;
+		
+	}
+
+	}
+
+	function valid_phone(phone){
+		var phoneno = /^\d{10}$/;
+    if(phone.value.match(phoneno) && (phone[0]=='6' || phone[0]=='7' || phone[0]=='8' || phone[0]=='9'))
+        {
+      return true;
+        }
+      else
+        {
+        alert("invalid phone Number");
+        phone.focus();
+        return false;
+
+        }
+}	
+
+
+</script>
+
+</body>
+</html>

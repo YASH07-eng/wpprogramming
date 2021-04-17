@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration with Javasript</title>
+	<link rel="stylesheet" type="text/css" href="css/styles2.css">
+</head>
+<body style="background-color: rgb(192,247,138)">
+<div class="container">
+	<img src="images\logo.png"  height="7%" width="7%">
+	<h1>AHMEDABAD INSTITUTE OF TECHNOLOGY</h1>
+</div>
+<nav>
+	<ul>
+		<li><a>Home</a></li>
+		<li><a>About Us</a></li>
+		<li><a>Campus</a></li>
+		<li><a>Placement</a></li>
+		<li><a>Resources</a></li>
+		<li><a>Contact Us</a></li>
+	</ul>
+</nav>
+<h4>REGISTRATION FORM</h4>
+<form>
+	<label>FIRST NAME:</label><input type="text" required name="fname" placeholder="Enter your first name"><br>
+		<label>LAST NAME:</label><input type="text" name="lname" placeholder="Enter your last name"><br>
+		<label>EMAIL:</label><input type="mail" name="mail" placeholder="Enter your mail id"><br>
+		<label>PHONE NUMBER:</label><input type="contact" name="contact" placeholder="Enter your phone number" maxlength="10"><br>
+		<label>CURRENT ADDRESS:</label><input type="text" name="address" placeholder="ADDRESS" id="current_add"><br>
+		<input type="checkbox" name="current_same" id="current_same" onclick="check()">Select the box if your current address is your permanant address<br>
+		<label>PERMANANT ADDRESS:</label><input type="text" name="address" placeholder="ADDRESS" id="permanent_add">
+
+</form>
+<button onclick="myfunction()">REGISTER</button>
+<script>
+		function myfunction(){
+			alert("Form Submitted Successfully")
+			}
+
+        function check() {
+
+            var current_add = document.getElementById('current_add');
+            var permanent_add = document.getElementById('permanent_add');
+            var current_same = document.getElementById('current_same');
+
+            if (current_same.checked == true) {
+                permanent_add.value = current_add.value;
+                permanent_add.disabled = true;
+            } 
+            else {
+                permanent_add.disabled = false;
+            }
+        } 
+        
+    
+	</script>
+	<footer>
+		copyright @2021 All rights reserved with Ahmedabad institute of technology
+	</footer>
+</body>
+</html>
